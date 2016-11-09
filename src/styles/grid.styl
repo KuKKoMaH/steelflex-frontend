@@ -1,0 +1,54 @@
+
+wrapper()
+  margin-left: auto
+  margin-right: auto
+  padding-left: column-gutter
+  padding-right: column-gutter
+  width: container-width + column-gutter * 2
+//if(DEVELOPMENT)
+//  background-grid()
+
+
+container()
+  margin-left: -(column-gutter)
+  margin-right: -(column-gutter)
+  cf()
+
+span(cols = 1, gutters = both)
+  min-height: 1px
+  float: left;
+  width: ( column-width * cols ) + ( column-gutter * 2 * ( cols - 1 ) )
+  if (gutters == both) or (gutters == left)
+    margin-left: column-gutter
+  if (gutters == both) or (gutters == right)
+    margin-right: column-gutter
+
+spanFluid(cols = 1, gutters = both)
+  min-height: 1px
+  float: left;
+  width: (100 / column-count * cols)%
+  if (gutters == both) or (gutters == left)
+    padding-left: column-gutter
+  if (gutters == both) or (gutters == right)
+    padding-right: column-gutter
+
+
+cf()
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+background-grid()
+  gradient = ''
+  color-transparent = 'rgba(0,0,0,0.01)'
+  color-grid = 'rgba(0,0,0,0.05)'
+  column-total-width =  column-gutter * 2 + column-width
+  for i in 0..column-count - 1
+    gradient += color-transparent + ' ' + ( column-total-width * i ) + ', '
+    gradient += color-transparent + ' ' + ( column-total-width * i + column-gutter) + ', '
+    gradient += color-grid + ' ' + ( column-total-width * i + column-gutter) + ', '
+    gradient += color-grid + ' ' + ( column-total-width * i + column-gutter + column-width) + ', '
+    gradient += color-transparent + ' ' + ( column-total-width * i + column-gutter + column-width) + ', '
+    gradient += color-transparent + ' ' + ( column-total-width * i + column-gutter + column-width + column-gutter) + ', '
+  background: linear-gradient(unquote('to right, ' + gradient + color-transparent + ' 100%'))

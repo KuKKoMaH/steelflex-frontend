@@ -1,0 +1,29 @@
+@import "grid.styl";
+
+// ====================================
+// colors
+// ====================================
+$black        = #333333
+$white        = #ffffff
+
+// ====================================
+// grid settings
+// ====================================
+column-width    = 65px
+column-gutter   = 15px
+column-count    = 12
+
+container-width = ( column-width * column-count ) + ( column-gutter * 2 * ( column-count - 1 ) )
+
+// ====================================
+// helpers
+// ====================================
+
+transparentBG(){
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+sprite($url)
+  background: url($url)
+  width: image-width($url)
+  height: image-height($url)
