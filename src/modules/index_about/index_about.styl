@@ -1,0 +1,58 @@
+.block
+  background: $light-grey
+  padding: 85px 0
+
+.wrapper
+  wrapper()
+
+.container
+  container()
+
+.title
+  spanFluid(12)
+  font-family: 'Magistral', sans-serif
+  font-size: 24px
+  margin-bottom: 45px
+
+  b
+    font-family: 'Russo One', sans-serif
+
+.image
+  spanFluid(4)
+
+.text
+  spanFluid(8)
+  font-size: 15px
+  line-height: 1.6
+
+  p
+    margin: 0 0 35px
+
+  ul
+    padding-left: 5px
+    margin: 0 0 35px
+    li
+      list-style-type: none
+      &:before
+        content: '-'
+        margin-right: 3px
+
+.more
+  display: inline-block
+  border-radius: 17px
+  border: 1px solid $red
+  background: transparent
+  box-shadow: 0
+  height: 38px
+  line-height: 36px
+  text-align: center
+  font-size: 15px
+  color: $red
+  padding: 0 22px
+
+  &:before
+    content: ' '
+    display: inline-block
+    vertical-align: middle
+    sprite('img/sprite-arrow.png')
+    margin-right: 10px

@@ -1,0 +1,143 @@
+.block
+  background: $light-grey
+
+.wrapper
+  wrapper()
+
+.container
+  container()
+  padding-top: 1px
+  margin-top: -50px
+  margin-bottom: -50px
+
+.contents
+  position: relative
+  background: #FFF
+  border-radius: 0 0 5px 5px
+  box-shadow: 0 3px 3px rgba(#000, 0.2)
+  z-index:2
+
+.headers
+  height: 100px
+  position: relative
+  margin: 0 -5px
+  cf()
+
+.header
+  width: 50%
+  height: 100%
+  float: left
+  padding: 0 5px
+
+  &_text
+    height: 100%
+    line-height: 100px
+    border-radius: 5px 5px 0 0
+    box-shadow: 0 3px 3px rgba(#000, 0.2)
+    font-family: Magistral, sans-serif
+    font-size: 32px
+    text-align: center
+    position: relative
+    z-index: 1
+    background: #f0f0f0
+
+    &:after
+      content ' '
+      position: absolute
+      top: 100%
+      left: 0
+      width: 100%
+      height: 1px
+      box-shadow 0 0 15px rgba(#000, 0.4)
+      transition: all .2s ease-out
+
+    &:hover:after
+      opacity: 0
+
+    ^[0]_active &
+      background: #fff
+      &:after
+        display: none
+
+.content
+  position: absolute
+  left: 0
+  top: 0
+  padding: 32px 30px 50px
+  z-index: 0
+  opacity: 0
+  transition: all .2s ease-out
+  cf()
+
+  &_active
+    position: relative
+    opacity: 1
+    z-index: 1
+
+.item
+  display: block
+  position: relative
+  spanFluid(4, 'none')
+  padding-left: 5px
+  height: 110px
+  line-height: 110px
+  border-radius: 55px 0 0 55px
+  background: #ebebeb
+  margin: 10px 0
+  border: 1px solid #ebebeb
+  transition: all .2s ease-out
+
+  &:hover
+    border: 1px solid #f14806
+    background: #ffe4d9
+
+  &:before
+    content: ' '
+    display: block
+    position: absolute
+    width: 70%
+    right: -1px
+    top: -1px
+    bottom: -1px
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+
+.image
+  float: left
+  font-size: 1px
+  height: 100px
+  width: 100px
+  border-radius: 50px
+  overflow: hidden
+  margin-top: 4px
+
+  img
+    display: block
+
+.text
+  margin-left: 133px
+  font-family: 'Arimo', sans-serif
+  font-size: 15px
+  padding-right: 70px
+  position: relative
+  z-index: 1
+
+  &_inner
+    display: inline-block
+    vertical-align: middle
+    line-height: 1.2
+
+.gear,
+.cube
+  &:before
+    content: ' '
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
+
+.gear:before
+  sprite('img/sprite-gear.png')
+
+.cube:before
+  sprite('img/sprite-cube.png')

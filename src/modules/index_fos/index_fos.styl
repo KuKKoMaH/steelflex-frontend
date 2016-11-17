@@ -1,0 +1,130 @@
+.block
+  background: url(img/bg.png)
+  background-size: cover
+  padding-top: 50px
+  color: #fff
+
+.wrapper
+  wrapper()
+
+.container
+  container()
+
+.title
+  font-family: 'Magistral', sans-serif
+  font-weight: bold
+  font-size: 33px
+  line-height: 1.4
+  text-align: center
+  width: (100 / column-count * 8)%
+  margin: 60px auto
+
+.text
+  spanFluid(7)
+
+  b
+    font: inherit
+    color: $red
+
+  p
+    font-size: 15px
+    line-height: 1.4
+    margin-bottom: 35px
+
+  &_title
+    font-family: 'Magistral', sans-serif
+    font-weight: bold
+    font-size: 24px
+    margin-bottom: 35px
+
+.contact
+  &_text
+    display: inline-block
+    vertical-align: middle
+
+  &:before
+    content: ' '
+    display: inline-block
+    vertical-align: middle
+    sprite('img/sprite-clock.png')
+    margin-right: 8px
+
+.form
+  float: left
+  margin-left: (100 / column-count)%
+  width: 340px
+
+.input
+  display: block
+  width: 100%
+  border-radius: 20px
+  background: #fff
+  border: 0
+  font-size: 13px
+  line-height: 16px
+  padding: ((40 - 16) / 2)px 24px
+  outline: 0
+  margin-bottom: 12px
+
+  &::-webkit-input-placeholder
+  &::-moz-placeholder
+  &:-moz-placeholder
+  &:-ms-input-placeholder
+    color: #404040
+
+.textarea
+  max-width: 100%
+  min-width: 100%
+  min-height 90px
+
+.footer
+  container()
+
+.file
+  float: left
+  position: relative
+  spanFluid(7)
+  overflow: hidden
+  height: 40px
+  line-height: 40px
+
+  &:before
+    content: ' '
+    display: inline-block
+    vertical-align: middle
+    sprite('img/sprite-file.png')
+    margin-left: 22px
+    margin-right: 12px
+
+  &_input
+    position: absolute
+    opacity: 0
+    width: 200%
+    height: 200%
+    right: 0
+    top: 0
+
+.name
+  display: inline-block
+  vertical-align: middle
+  font-size: 12px
+  font-weight: bold
+  color: #ffffff
+
+.submit
+  float: left
+  spanFluid(5)
+
+.submit_button
+  display: block
+  width: 100%
+  border-radius: 17px
+  background: $red
+  border: 0
+  box-shadow: 0
+  height: 38px
+  line-height: 36px
+  text-align: center
+  font-size: 12px
+  color: #ffffff
+  font-weight: bold

@@ -1,0 +1,14 @@
+- var items = ["О компании", "Металлоконструкции", "Изделия", "Металлообработка", "Контакты"]
+.footer: .wrapper: .container
+  .contacts
+    .phone 8 (812) 969-91-75
+    .work Работаем с #[b 9 до 21] Без выходных
+    .address: .address_inner Санкт-Петербург, Коломяжский пр, 10
+  .right
+    .menu
+      each item in items
+        .menu_item: a(href='#')= item
+    .info
+      .email: .email_inner Info@steelflexspb.ru
+      .copyright 2012-2016 © Steelflex.ru
+      .logo STEEL#[b FLEX]

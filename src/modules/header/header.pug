@@ -1,1 +1,13 @@
-.header HEADER
+- var items = ["О компании", "Металлоконструкции", "Изделия", "Металлообработка", "Контакты"]
+.header: .wrapper: .container
+  .logo
+    .logo_image
+  .menu
+    each item in items
+      .menu_item: a(href='#')= item
+  .contacts
+    .contacts_inner
+      .phone 8 (812) 969-91-75
+      .email Info@steelflexspb.ru
+  .fos
+    .button

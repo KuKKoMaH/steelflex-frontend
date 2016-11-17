@@ -1,0 +1,24 @@
+.block
+  .title Наше главное конкурентное преимущество - кратчайший срок реализации заказа!
+  .wrapper: .container
+    .text
+      .text_title Рассчитаем ваш заказ #[b за 1 рабочий день!]
+      .text_content
+        p
+          |Оперативно реагируем на все входящие заявки.#[br]
+          |Рассчитаем ваш заказ в течение 24 часов с момента получения технического задания.
+        p
+          |Просто прикрепите файл в формате dwg, а также при необходимости#[br]
+          |укажите комментарий к заказу (предпочтительный материал, доставка)
+
+        p.contact: span.contact_text Мы свяжемся с вами в течение 24 часов
+    .form
+      input.input(placeholder='Ваше имя')
+      input.input(placeholder='Телефон')
+      textarea.input.textarea(placeholder='Ваш комментарий')
+      .footer
+        .file
+          .name Прикрепить файл
+            input(type='file').file_input
+        .submit
+            button.submit_button ОТПРАВИТЬ
