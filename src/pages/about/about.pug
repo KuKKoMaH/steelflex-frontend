@@ -1,0 +1,15 @@
+extends ../../layout/layout
+include ../../modules/title/title
+
+block body
+  +title("О компании", ["Главная", "О компании"])
+  .page: .wrapper: .container
+    include ../../modules/2col_text/2col_text
+    include ../../modules/about_service/about_service
+    .products
+      .title
+        .title_text Изделия из металла
+        a.title_link(href='products.html'): .title_link_text Смотреть все изделия
+      include ../../modules/products/products
+    include ../../modules/about_equipment/about_equipment
+    include ../../modules/about_seo/about_seo

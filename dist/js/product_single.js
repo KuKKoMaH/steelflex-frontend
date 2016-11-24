@@ -1,0 +1,1 @@
+webpackJsonp([6],{0:function(n,p,i){i(16),i(1),i(7),i(7),n.exports=i(15)},16:function(n,p,i){var o=i(2),t=(i(5),i(6).pages.product_single);o("."+t.button).magnificPopup({type:"inline"})}});

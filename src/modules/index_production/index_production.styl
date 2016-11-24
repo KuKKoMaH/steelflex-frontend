@@ -1,5 +1,5 @@
 .block
-  background: $light-grey
+  background: $grey200
 
 .wrapper
   wrapper()
@@ -73,60 +73,6 @@
     position: relative
     opacity: 1
     z-index: 1
-
-.item
-  display: block
-  position: relative
-  spanFluid(4, 'none')
-  padding-left: 5px
-  height: 110px
-  line-height: 110px
-  border-radius: 55px 0 0 55px
-  background: #ebebeb
-  margin: 10px 0
-  border: 1px solid #ebebeb
-  transition: all .2s ease-out
-
-  &:hover
-    border: 1px solid #f14806
-    background: #ffe4d9
-
-  &:before
-    content: ' '
-    display: block
-    position: absolute
-    width: 70%
-    right: -1px
-    top: -1px
-    bottom: -1px
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
-
-.image
-  float: left
-  font-size: 1px
-  height: 100px
-  width: 100px
-  border-radius: 50px
-  overflow: hidden
-  margin-top: 4px
-
-  img
-    display: block
-
-.text
-  margin-left: 133px
-  font-family: 'Arimo', sans-serif
-  font-size: 15px
-  padding-right: 70px
-  position: relative
-  z-index: 1
-
-  &_inner
-    display: inline-block
-    vertical-align: middle
-    line-height: 1.2
 
 .gear,
 .cube

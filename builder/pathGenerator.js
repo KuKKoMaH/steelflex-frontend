@@ -30,7 +30,7 @@ var paths = {
 
 
 /**
- * Возвращает объкт с существующими файлами внутри директории модуля или страницы dir
+ * Возвращает объект с существующими файлами внутри директории модуля или страницы dir
  * @param dir - имя модуля
  * @param moduleType - тип модуля 1 из ['pages', 'modules']
  * @return {{template, style, script}}
@@ -59,7 +59,7 @@ function getDependencies(template) {
       },
       'scripts': function (text, options) {
         return text;
-      },
+      }
     },
   });
   return file.dependencies
@@ -81,6 +81,8 @@ function getFiles() {
     };
     var dirs = fs.readdirSync(paths.pagesPath);
     dirs.map((dir) => {
+      // пропустить не директории
+      if (!fs.lstatSync(path.resolve(paths.basePath, 'pages', dir)).isDirectory()) return;
       var pageFiles = getModuleFiles(dir, 'pages');
       files.pages[dir] = pageFiles;
       var dependencies = getDependencies(pageFiles.template);

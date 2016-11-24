@@ -1,0 +1,13 @@
+extends ../../layout/layout
+include ../../modules/title/title
+include ../../modules/services/services
+
+block body
+  +title("Металлообработка", ["Главная", "Металлообработка"])
+  .page: .wrapper: .container
+    div.text
+      include ../../modules/2col_text/2col_text
+    div.services
+      +services('white', 'metalworking_single.html')
+    include ../../modules/metalworks_seo/metalworks_seo
+  include ../../modules/metalworks_fos/metalworks_fos

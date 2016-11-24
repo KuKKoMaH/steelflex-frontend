@@ -1,13 +1,29 @@
-- var items = ["О компании", "Металлоконструкции", "Изделия", "Металлообработка", "Контакты"]
-.header: .wrapper: .container
-  .logo
-    .logo_image
-  .menu
-    each item in items
-      .menu_item: a(href='#')= item
-  .contacts
-    .contacts_inner
-      .phone 8 (812) 969-91-75
-      .email Info@steelflexspb.ru
-  .fos
-    .button
+
+mixin header_wrapper(white)
+  if(white)
+    header.header.white
+      block
+  else
+    header.header
+      block
+
+mixin header(white)
+  - var items = []
+  - items.push({name: "О компании", link: "about.html"})
+  - items.push({name: "Металлоконструкции", link: "constructions.html"})
+  - items.push({name: "Изделия", link: "products.html"})
+  - items.push({name: "Металлообработка", link: "metalworking.html"})
+  - items.push({name: "Контакты", link: "contacts.html"})
+  +header_wrapper(white)
+    .wrapper: .container
+      .logo
+        a.logo_image(href='index.html')
+      nav.menu
+        each item in items
+          .menu_item: a(href= item.link)= item.name
+      .contacts
+        .contacts_inner
+          .phone 8 (812) 969-91-75
+          .email Info@steelflexspb.ru
+      .fos
+        a.button(href="#header-callback")

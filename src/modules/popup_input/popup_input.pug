@@ -1,0 +1,7 @@
+mixin popup_input(placeholder, type)
+  if(type == 'select')
+    div.select_wrapper
+      select.input.select(placeholder= placeholder)
+        block
+  else
+    input.input(placeholder= placeholder)

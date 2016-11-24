@@ -1,0 +1,9 @@
+mixin title(title, breadcrumbs)
+  .block
+    h1.title= title
+    .breadcrumbs
+      each item, index in breadcrumbs
+        if(index == breadcrumbs.length - 1)
+          a.item.active= item
+        else
+          .item= item

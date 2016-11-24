@@ -1,0 +1,20 @@
+mixin fos_wrapper(theme)
+  if(theme)
+    .cols.white
+      block
+  else
+    .cols
+      block
+
+mixin fos(button_text, theme)
+  +fos_wrapper(theme)
+    .col
+      input.input(placeholder='Ваше имя')
+      input.input(placeholder='Телефон')
+      input.input(placeholder='Почта')
+      .file
+        .name прикрепить файл задания
+        input(type='file').file_input
+    .col
+      textarea.input.textarea(placeholder='Ваш комментарий')
+      button.submit= button_text

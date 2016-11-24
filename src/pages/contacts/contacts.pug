@@ -1,0 +1,33 @@
+extends ../../layout/layout
+include ../../modules/header/header
+
+block header
+  +header('white')
+
+block body
+  .map
+    include ../../modules/map/map
+  .page: .wrapper: .container
+    .info
+      h1.title Как с нами связаться?
+      p Компания СтилФлекс реализует программу импортозамещения. На нашем производстве мы изготовим и поставим детали, которые Вы заказывали за рубежом. Данная замена импортных комплектующих имеет ряд преимуществ:
+      .contacts
+        .contact
+          .icon: .icon_inner.icon1
+          .text: .text_inner
+            | По телефону
+            b 8 (812) 969-91-75
+        .contact
+          .icon: .icon_inner.icon2
+          .text: .text_inner
+            | По телефону
+            b 8 (812) 969-91-75
+        .contact
+          .icon: .icon_inner.icon3
+          .text: .text_inner
+            | По watsapp или viber
+            b 8 (921) 969-91-75
+    .manufacture
+      h2.title Наше производство
+      p Санкт-петербург, Шафировский проспект, д. 16А
+      img.photo(src='img/manufacture.png')

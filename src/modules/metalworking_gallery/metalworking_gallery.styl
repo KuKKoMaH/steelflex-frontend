@@ -1,0 +1,57 @@
+@import "../../../node_modules/slick-carousel/slick/slick.css"
+
+.big_gallery
+  display: block
+  width: 369px
+  margin: 0 auto 12px
+
+.small_gallery
+  display: block
+  //margin: 0 -6px
+  position: relative
+
+  &:hover
+    :global
+      .slick-arrow
+        opacity: 1
+
+  :global
+    .slick-arrow
+      position: absolute
+      width: 115px
+      height: 75px
+      top: 0
+      border: 0
+      z-index: 1
+      overflow: hidden
+      text-indent: 200%
+      background: rgba(#000, 0.5)
+      opacity: 0
+      transition: all .1s ease-out
+
+      &:after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-left: -3px
+        margin-top: -6px
+
+    .slick-prev
+      left: 1px
+      &:after
+        sprite('img/sprite-arrow-left.png')
+
+    .slick-next
+      right: 0
+      &:after
+        sprite('img/sprite-arrow-right.png')
+
+.slide
+  margin: 0 6px
+  width: 115px
+  height: 75px
+
+  img
+    display: block

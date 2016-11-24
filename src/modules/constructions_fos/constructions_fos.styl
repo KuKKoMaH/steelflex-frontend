@@ -1,0 +1,104 @@
+.block
+  background: url(../../img/blueprint-bg.jpg) 50% 50%
+  padding-top: 50px
+  padding-bottom: 40px
+  color: #fff
+
+  font-size: 15px
+  line-height: 1.8
+
+  p
+    margin: 0 0 30px
+
+
+.wrapper
+  wrapper()
+
+.container
+  container()
+
+.cols
+  container()
+  margin-bottom: 15px
+
+.col
+  spanFluid(6)
+
+.title
+  position: relative
+  padding-left: 83px
+  font-family: 'Magistral', sans-serif
+  font-size: 32px
+  line-height: 1.2
+  color: #fff
+  margin-bottom: 45px
+
+  b
+    color: $red
+
+  &:before
+    content: ' '
+    display: block
+    position: absolute
+    sprite('img/sprite-title-icon.png')
+    left: 0
+    top: -9px
+
+.logo
+  display: inline-block
+  vertical-align: middle
+  sprite('../../img/sprite-seo-logo-white.png')
+
+.steps
+  container()
+  counter-reset: steps
+  margin: 0
+  padding: 0
+
+  li
+    list-style: none
+    spanFluid(6)
+    padding-left: 80px
+    height: 60px
+    line-height: 60px
+    position: relative
+    margin-bottom: 20px
+
+    &.wide
+      width: 100%
+
+    &:before
+      position: absolute
+      left: 0
+      top: 0
+      counter-increment: steps
+      content: counters(steps, ".")
+      font-family: 'Magistral', sans-serif
+      width: 60px
+      height: 60px
+      border: 2px solid #fff
+      color: #fff
+      border-radius: 50%
+      text-align: center
+      line-height: 56px
+      font-size: 30px
+
+
+
+.step
+  display: inline-block
+  vertical-align: middle
+  font-size: 14px
+  line-height: 1.8
+
+.big
+  font-family: 'Magistral', sans-serif
+  font-size: 36px
+  line-height: 1.25
+  color: $white
+
+.warn
+  color: $red
+
+.form
+  margin-left: -(column-gutter)

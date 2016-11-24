@@ -1,7 +1,15 @@
+$height = 245px
+
+.placeholder
+  height: $height
 
 .footer
-  border-top: 1px solid $light-grey
+  border-top: 1px solid $grey200
   padding: 55px 0 55px
+
+  position: absolute
+  bottom: 0
+  width: 100%
 
 .wrapper
   wrapper()
@@ -73,10 +81,10 @@
   margin-left: 55px
 
 .logo
-  font-family: 'Russo One', sans-serif
-  color: $red
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
   display: inline-block
   vertical-align: middle
   margin-left: 45px
-  b
-    color: $black
+  sprite('img/sprite-footer-logo.png')

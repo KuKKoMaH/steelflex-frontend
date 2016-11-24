@@ -1,0 +1,87 @@
+.block
+  background: url(../../img/blueprint-bg.jpg) 50% 50%
+  padding-top: 50px
+  padding-bottom: 40px
+  color: #fff
+
+.wrapper
+  wrapper()
+
+.container
+  container()
+
+.cols
+  container()
+  margin-bottom: 15px
+
+.col
+  spanFluid(6)
+
+.title
+  position: relative
+  padding-left: 83px
+  font-family: 'Magistral', sans-serif
+  font-size: 32px
+  line-height: 1.2
+  color: #fff
+  margin-bottom: 45px
+
+  b
+    color: $red
+
+  &:before
+    content: ' '
+    display: block
+    position: absolute
+    sprite('img/sprite-question.png')
+    left: 0
+    top: -9px
+
+.text
+  spanFluid(5)
+  font-size: 18px
+  line-height: 1.2
+
+  p
+    margin: 0 0 30px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  li
+    padding-left: 15px
+    position: relative
+    font-size: 17px
+    margin-bottom: 20px
+
+    &:before
+      content: ' '
+      position: absolute
+      left: 0
+      top: 7px
+      display: inline-block
+      vertical-align: middle
+      width: 0
+      height: 0
+      border-left: 5px solid #fff
+      border-top: 4px solid transparent
+      border-bottom: 4px solid transparent
+
+.contact
+  &_text
+    font-size: 17px
+    display: inline-block
+    vertical-align: middle
+
+  &:before
+    content: ' '
+    display: inline-block
+    vertical-align: middle
+    sprite('../../img/sprite-clock.png')
+    margin-right: 8px
+
+.form
+  spanFluid(7)
+  padding-left: column-gutter + 30px

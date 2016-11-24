@@ -1,0 +1,10 @@
+extends ../../layout/layout
+include ../../modules/title/title
+include ../../modules/services/services
+
+block body
+  +title("Изделия", ["Главная", "Изделия"])
+  .page: .wrapper: .container
+    include ../../modules/2col_text/2col_text
+    .products
+      include ../../modules/products/products

@@ -1,0 +1,11 @@
+mixin metalwoks_tabs(items)
+  .block
+    each item, i in items
+      if(i == 0)
+        .item.active(data-tab=i)
+          .arrow
+          .text= item
+      else
+        .item(data-tab=i)
+          .arrow
+          .text= item

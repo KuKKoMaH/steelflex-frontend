@@ -1,0 +1,83 @@
+.cols
+  container()
+  margin-bottom: 15px
+
+.col
+  spanFluid(6)
+
+.white
+  .file
+    color: $black
+
+    &:before
+      sprite('../../img/sprite-file-black.png')
+
+  .input
+    box-shadow: 0 1px 3px rgba(0, 1, 1, 0.1);
+
+.input
+  display: block
+  width: 100%
+  border-radius: 20px
+  background: #fff
+  border: 0
+  font-size: 13px
+  line-height: 16px
+  padding: ((40 - 16) / 2)px 24px
+  outline: 0
+  margin-bottom: 12px
+
+  &::-webkit-input-placeholder
+  &::-moz-placeholder
+  &:-moz-placeholder
+  &:-ms-input-placeholder
+    color: #404040
+
+.textarea
+  max-width: 100%
+  min-width: 100%
+  min-height 144px
+
+
+.file
+  position: relative
+  overflow: hidden
+  height: 40px
+  line-height: 40px
+  padding-left: 55px
+  color: $white
+
+  &:before
+    content: ' '
+    sprite('../../img/sprite-file.png')
+    position: absolute
+    left: 20px
+    top: 12px
+
+  &_input
+    position: absolute
+    opacity: 0
+    width: 200%
+    height: 200%
+    right: 0
+    top: 0
+
+.name
+  display: inline-block
+  vertical-align: middle
+  font-size: 12px
+  line-height: 1.2
+  font-weight: bold
+
+.submit
+  display: inline-block
+  vertical-align: middle
+  border-radius: 20px
+  background-color: $red
+  color: #fff
+  font-size: 12px
+  line-height: 1
+  font-weight: bold
+  text-transform: uppercase
+  padding: 14px 27px
+  border: 0

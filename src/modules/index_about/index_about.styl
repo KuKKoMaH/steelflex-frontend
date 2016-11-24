@@ -1,5 +1,5 @@
 .block
-  background: $light-grey
+  background: $grey200
   padding: 85px 0
 
 .wrapper
@@ -16,6 +16,18 @@
 
   b
     font-family: 'Russo One', sans-serif
+
+  &_text
+    display: inline-block
+    vertical-align: middle
+
+  &_logo
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden
+    sprite('img/sprite-logo.png')
+    display: inline-block
+    vertical-align: middle
 
 .image
   spanFluid(4)
@@ -54,5 +66,5 @@
     content: ' '
     display: inline-block
     vertical-align: middle
-    sprite('img/sprite-arrow.png')
+    sprite('../../img/sprite-arrow.png')
     margin-right: 10px

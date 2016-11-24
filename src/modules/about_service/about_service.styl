@@ -1,0 +1,31 @@
+.block
+  spanFluid(12)
+  padding-top: 55px
+
+.title
+  margin-bottom: 30px
+  &_text
+    display: inline-block
+    vertical-align: middle
+    font-family: "Magistral", sans-serif
+    font-weight: bold
+    font-size: 24px
+
+  &_link
+    display: inline-block
+    vertical-align: middle
+    margin-left: 45px
+    color: $red
+    font-size: 15px
+    line-height: 1.2
+    padding-top: 5px
+
+    &:before
+      content: ' '
+      display: inline-block
+      vertical-align: middle
+      sprite('../../img/sprite-arrow.png')
+
+    &_text
+      display: inline-block
+      vertical-align: middle

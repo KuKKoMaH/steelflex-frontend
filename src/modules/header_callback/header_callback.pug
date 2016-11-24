@@ -1,0 +1,12 @@
+include ../popup/popup
+include ../popup_input/popup_input
+include ../popup_button/popup_button
+
++popup('header-callback')
+  .title Заказать обратный звонок
+  .text Мы перезвоним вам в течение нескольких минут
+  form.form
+    .input: +popup_input("Ваше имя")
+    .input: +popup_input("Телефон")
+    .submit
+      +popup_button("Заказать звонок")

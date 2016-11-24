@@ -1,0 +1,16 @@
+include ../popup/popup
+include ../popup_input/popup_input
+include ../popup_button/popup_button
+
++popup('product-order')
+  .title Оставить заявку
+  .text Оставьте заявку на заказ изделия, мы перезвоним и уточним детали
+  form.form
+    .input: +popup_input("Ваше имя")
+    .input: +popup_input("Телефон")
+    .input
+      +popup_input("Тут селект должен быть", 'select')
+        option Металлические двери
+        option Металлические двери
+        option Металлические двери
+    .input: +popup_button("Оставить заявку", true)

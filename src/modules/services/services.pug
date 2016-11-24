@@ -1,0 +1,29 @@
+mixin services_wrapper(theme)
+  if(!theme )
+    div.wrapper.grey
+      block
+  else
+    div.wrapper.white
+      block
+
+mixin services(theme, link)
+  +services_wrapper(theme)
+    a.item(href= link)
+      .image: img(src='img/metal-1.png')
+      .text: .text_inner Лазерная и плазменная резка металла
+    a.item(href= link)
+      .image: img(src='img/metal-2.png')
+      .text: .text_inner Гибка металла
+    a.item(href= link)
+      .image: img(src='img/metal-3.png')
+      .text: .text_inner Сварочные работы
+    a.item(href= link)
+      .image: img(src='img/metal-4.png')
+      .text: .text_inner Окраска металла
+    a.item(href= link)
+      .image: img(src='img/metal-5.png')
+      .text: .text_inner Сборка металлоконструкций
+    a.item(href= link)
+      .image: img(src='img/metal-6.png')
+      .text: .text_inner Рубка металла
+

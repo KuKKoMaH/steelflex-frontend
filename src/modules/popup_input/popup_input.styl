@@ -1,0 +1,23 @@
+.input
+  display: block
+  width: 100%
+  background: $grey200
+  padding: 12px 22px
+  border-radius: 20px
+  font-size: 13px
+  border: 0
+  box-shadow: 0
+
+.select
+  -webkit-appearance: none
+
+  &_wrapper
+    position: relative
+
+    &:after
+      content: ' '
+      display: block
+      sprite('sprite-select-arrow.png')
+      position: absolute
+      right: 20px
+      top: 18px
