@@ -3,3 +3,36 @@
   width: 100%
   overflow: hidden
 
+  :global
+    .slick-dots
+      position: absolute
+      bottom: 124px
+      left: 50%
+      transform: translateX(-50%)
+      margin: 0
+      padding: 3px
+      border: 1px solid $red
+      border-radius: 11px
+      font-size: 1px
+
+      li
+        display: inline-block
+        vertical-align: top
+        margin-left: 16px
+
+        button
+          display: inline-block
+          vertical-align: top
+          width: 16px
+          height: 16px
+          background: $white
+          border-radius: 8px
+          overflow: hidden
+          text-indent: 9999px
+          border: 0
+
+        &:first-child
+          margin-left: 0
+
+        &.slick-active button
+          background: $red

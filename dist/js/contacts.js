@@ -1,1 +1,90 @@
-webpackJsonp([2],{0:function(a,e,t){t(1),t(7),t(7),t(1),a.exports=t(10)},10:function(a,e,t){function n(){var a=r("#map"),e=a.data("zoom")||7,t=[a.data("lat"),a.data("lng")],n=a.data("marker"),o=new ymaps.Map("map",{center:t,zoom:e,controls:["zoomControl","fullscreenControl"]});o.behaviors.disable("scrollZoom");var i=new Image;i.onload=function(){var a=new ymaps.Placemark(t,{},{iconLayout:"default#image",iconImageHref:n,iconImageSize:[i.naturalWidth,i.naturalHeight],iconImageOffset:[-Math.ceil(i.naturalWidth/2),-i.naturalHeight]});o.geoObjects.add(a)},i.src=n}var r=t(2),o=t(11);o("//api-maps.yandex.ru/2.1/?lang=ru_RU").then(function(){ymaps.ready(n)})},11:function(a,e){function t(a){if(Array.isArray(a)){var e=[];return a.forEach(function(a){e.push(t(a))}),Promise.all(e)}return new Promise(function(e,t){var n=!1,r=document.getElementsByTagName("script")[0],o=document.createElement("script");o.type="text/javascript",o.src=a,o.async=!0,o.onload=o.onreadystatechange=function(){n||this.readyState&&"complete"!==this.readyState||(n=!0,e(this))},o.onerror=o.onabort=t,r.parentNode.insertBefore(o,r)})}a.exports=t}});
+webpackJsonp([2],{
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+	__webpack_require__(7);
+	__webpack_require__(7);
+	__webpack_require__(1);
+	module.exports = __webpack_require__(10);
+
+
+/***/ },
+
+/***/ 10:
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+	var scriptLoader = __webpack_require__(11);
+
+	function createMap() {
+	  var $el = $("#map");
+	  var zoom = $el.data('zoom') || 7;
+	  var coords = [$el.data('lat'), $el.data('lng')];
+	  var markerImage = $el.data('marker');
+
+	  var map = new ymaps.Map('map', {
+	    center: coords,
+	    zoom: zoom,
+	    controls: ['zoomControl', 'fullscreenControl']
+	  });
+	  map.behaviors.disable('scrollZoom');
+
+	  var marker = new Image();
+	  marker.onload = function(){
+	    var placemark = new ymaps.Placemark(coords, {}, {
+	      iconLayout: 'default#image',
+	      iconImageHref: markerImage,
+	      iconImageSize: [marker.naturalWidth, marker.naturalHeight],
+	      iconImageOffset: [-Math.ceil(marker.naturalWidth/2), -marker.naturalHeight]
+	    });
+	    map.geoObjects.add(placemark);
+	  };
+	  marker.src = markerImage;
+	}
+
+	scriptLoader('//api-maps.yandex.ru/2.1/?lang=ru_RU').then(function(){
+	  ymaps.ready(createMap);
+	});
+
+
+/***/ },
+
+/***/ 11:
+/***/ function(module, exports) {
+
+	function scriptLoader(url) {
+	  if (Array.isArray(url)) {
+	    var prom = [];
+	    url.forEach(function (item) {
+	      prom.push(scriptLoader(item));
+	    });
+	    return Promise.all(prom);
+	  }
+
+	  return new Promise(function (resolve, reject) {
+	    var r = false;
+	    var t = document.getElementsByTagName('script')[0];
+	    var s = document.createElement('script');
+
+	    s.type = 'text/javascript';
+	    s.src = url;
+	    s.async = true;
+	    s.onload = s.onreadystatechange = function () {
+	      if (!r && (!this.readyState || this.readyState === 'complete')) {
+	        r = true;
+	        resolve(this);
+	      }
+	    };
+	    s.onerror = s.onabort = reject;
+	    t.parentNode.insertBefore(s, t);
+	  });
+	}
+
+	module.exports = scriptLoader;
+
+
+/***/ }
+
+});

@@ -1,1 +1,53 @@
-webpackJsonp([3],{0:function(e,a,o){o(1),o(7),o(7),o(12),e.exports=o(13)},12:function(e,a,o){var n=o(2),i=(o(9),o(6).modules.index_slider),l=n("."+i.gallery);l.slick({slidesToShow:5,slidesToScroll:5,dots:!0,arrows:!1}),l.magnificPopup({type:"image",delegate:"a:not(.slick-cloned)",gallery:{enabled:!0,navigateByImgClick:!0,preload:[0,1]}})},13:function(e,a,o){var n=o(6).modules.index_production,i=o(2),l=i("."+n.header),t=i("."+n.content);l.on("click",function(){l.removeClass(n.header_active),t.removeClass(n.content_active);var e=i(this);e.addClass(n.header_active),i("#"+e.data("for")).addClass(n.content_active)})}});
+webpackJsonp([3],{
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(1);
+	__webpack_require__(7);
+	__webpack_require__(7);
+	__webpack_require__(12);
+	module.exports = __webpack_require__(13);
+
+
+/***/ },
+
+/***/ 12:
+/***/ function(module, exports, __webpack_require__) {
+
+	var $ = __webpack_require__(2);
+	var slick = __webpack_require__(9);
+	var styles = __webpack_require__(6).modules.index_slider;
+
+	var $gallery = $('.' + styles.wrapper);
+
+	$gallery.slick({
+	  slidesToShow:   1,
+	  slidesToScroll: 1,
+	  arrows:         false,
+	  dots:           true,
+	});
+
+/***/ },
+
+/***/ 13:
+/***/ function(module, exports, __webpack_require__) {
+
+	var styles = __webpack_require__(6).modules.index_production;
+	var $ = __webpack_require__(2);
+
+	var $headers = $('.' + styles.header);
+	var $content = $('.' + styles.content);
+
+	$headers.on('click', function(){
+	  $headers.removeClass(styles.header_active);
+	  $content.removeClass(styles.content_active);
+	  var $this = $(this);
+	  $this.addClass(styles.header_active);
+	  $('#' + $this.data('for')).addClass(styles.content_active);
+	});
+
+
+/***/ }
+
+});
