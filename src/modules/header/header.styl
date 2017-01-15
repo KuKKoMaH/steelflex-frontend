@@ -1,11 +1,17 @@
 $height = 84px
 
-.header
+.placeholder
   height: $height
+
+.header
+  position: fixed
+  left: 0
+  top: 0
+  height: $height
+  width: 100%
   line-height: $height
   background: $grey200
-  position: relative
-  z-index: 1
+  z-index: 10
 
 .white
   background: $white
@@ -45,6 +51,10 @@ $height = 84px
   vertical-align: middle
   font-size: 14px
   line-height: $height
+  transition: all .1s ease-out
+
+  a:hover, &.active a
+    color: $red
 
 .contacts
   spanFluid(3)
@@ -65,6 +75,11 @@ $height = 84px
 
 .fos
   spanFluid(1)
+  &_inner
+    display: inline-block
+    vertical-align: middle
+    line-height: 1.2
+    width: 100%
 
 .button
   display: inline-block
@@ -77,9 +92,13 @@ $height = 84px
   height: 38px
   line-height: 36px
   text-align: center
+  transition: all .1s ease-out
 
-  &:after
-    content: ' '
-    display: inline-block
-    vertical-align: middle
-    sprite('img/sprite-call.png')
+  &:hover
+    background-color: $orange
+
+.call-icon
+  content: ' '
+  display: inline-block
+  vertical-align: middle
+  sprite('img/sprite-call.png')

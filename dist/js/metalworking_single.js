@@ -8,7 +8,9 @@ webpackJsonp([5],{
 	__webpack_require__(7);
 	__webpack_require__(7);
 	__webpack_require__(15);
+	__webpack_require__(8);
 	__webpack_require__(15);
+	__webpack_require__(8);
 	__webpack_require__(15);
 	module.exports = __webpack_require__(8);
 
@@ -30,7 +32,6 @@ webpackJsonp([5],{
 	  $content.removeClass(styles.active);
 	  var $this = $(this);
 	  $this.addClass(tabStyles.active);
-	  console.log($this.data('tab'));
 	  $('#tab-' + $this.data('tab')).addClass(styles.active);
 	});
 

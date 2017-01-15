@@ -1,5 +1,7 @@
+include ../button/button
 
 mixin header_wrapper(white)
+  .placeholder
   if(white)
     header.header.white
       block
@@ -25,5 +27,7 @@ mixin header(white)
         .contacts_inner
           .phone 8 (812) 969-91-75
           .email Info@steelflexspb.ru
-      .fos
-        a.button(href="#header-callback")
+      .fos: .fos_inner
+        +button('a', '#header-callback', false, true)
+          .call-icon
+        //a.button(href="#header-callback")

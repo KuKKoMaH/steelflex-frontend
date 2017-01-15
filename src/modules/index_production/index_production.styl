@@ -28,6 +28,7 @@
   height: 100%
   float: left
   padding: 0 5px
+  cursor: pointer
 
   &_text
     height: 100%
@@ -38,8 +39,10 @@
     font-size: 32px
     text-align: center
     position: relative
-    z-index: 1
-    background: #f0f0f0
+    background: $grey100
+
+    &:hover
+      background: linear-gradient(to bottom, $grey100 0, $orange200 100%);
 
     &:after
       content ' '
@@ -51,11 +54,12 @@
       box-shadow 0 0 15px rgba(#000, 0.4)
       transition: all .2s ease-out
 
-    &:hover:after
-      opacity: 0
+    //&:hover:after
+    //  opacity: 0
 
     ^[0]_active &
       background: #fff
+      z-index: 1
       &:after
         display: none
 
@@ -67,6 +71,7 @@
   z-index: 0
   opacity: 0
   transition: all .2s ease-out
+  width: 100%
   cf()
 
   &_active

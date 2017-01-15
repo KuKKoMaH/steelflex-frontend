@@ -1,0 +1,11 @@
+mixin button(type, text, ghost, b, icon)
+  - classNames = 'b' + (ghost ? ' b-g' : '') + (b ? ' b-b' : '') + (icon ? ' b-i' : '')
+  case type
+    when 'button'
+      button(class=classNames)
+        block
+    when 'a'
+      a(href=text class=classNames)
+        block
+    when 'submit'
+      input(type='submit' value=text class=classNames)

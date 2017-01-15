@@ -1,0 +1,47 @@
+$height = 38px
+
+:global
+  .b
+    display: inline-block
+    vertical-align: middle
+    width: auto
+    padding: 0 22px
+    border-radius: ($height / 2)
+    background: $red
+    border: 0
+    box-shadow: 0
+    height: $height
+    line-height: 36px
+    text-align: center
+    font-size: 12px
+    color: $white
+    font-weight: bold
+    transition: all .1s ease-out
+    cursor: pointer
+
+    &:hover
+      background-color: $orange
+      color: $white
+
+    &-g//host
+      background-color: transparent
+      border: 1px solid $red
+      color: $red
+
+      &:hover
+        background-color: $red
+
+    &-b//lock
+      display: block
+      width: 100%
+
+    &-i
+      &:before
+        content: ' '
+        display: inline-block
+        vertical-align: middle
+        sprite('../../img/sprite-arrow.png')
+        margin-right: 10px
+
+      &:hover:before
+        sprite('../../img/sprite-arrow-hover.png')

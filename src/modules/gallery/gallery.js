@@ -12,12 +12,14 @@ $gallery.slick({
   arrows:         false
 });
 
-$gallery.magnificPopup({
-  type: 'image',
-  delegate: 'a:not(.slick-cloned)',
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0,1]
-  },
-});
+$gallery.each(function(i, el) {
+  $(el).magnificPopup({
+    type: 'image',
+    delegate: 'a:not(.slick-cloned)',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1]
+    },
+  });
+})
