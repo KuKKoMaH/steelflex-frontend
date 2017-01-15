@@ -1,6 +1,7 @@
 extends ../../layout/layout
 include ../../modules/title/title
 include ../../modules/metalworks_tabs/metalworks_tabs
+include ../../modules/button/button
 
 block body
   +title("Металлические двери", ["Главная", "Изделия", "Металлические двери"])
@@ -18,4 +19,4 @@ block body
       .subtitle Оставьте заявку на заказ изделия, мы перезвоним и уточним детали
       .subtitle или позвоните по номеру 8 (812) 969-91-75 с 10 до 22 ежедневно
       .fos_button
-        a.button(href='#product-order') оставить заявку
+        +button('a', '#product-order') ОСТАВИТЬ ЗАЯВКУ

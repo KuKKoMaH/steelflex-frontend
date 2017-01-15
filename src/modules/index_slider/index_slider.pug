@@ -1,4 +1,14 @@
+include ../button/button
+
+mixin slide()
+  .slide
+    img.image(data-lazy='img/slide.png')
+    .content
+      .title Металлообрабатывающее производство #[span Стилфлекс]#[br]Гибка металла от 5 000 руб. / гиб
+      .text Оперативно реагируем на все входящие заявки.#[br]Рассчитаем ваш заказ в течение 24 часов с момента получения технического задания
+      +button('a', '/' ) Подробнее
+
 .wrapper
-  .slide: img.image(data-lazy='img/slide.png')
-  .slide: img.image(data-lazy='img/slide.png')
-  .slide: img.image(data-lazy='img/slide.png')
+  +slide()
+  +slide()
+  +slide()
