@@ -1,6 +1,6 @@
 include ../popup/popup
 include ../popup_input/popup_input
-include ../popup_button/popup_button
+include ../button/button
 
 +popup('header-callback')
   .title Заказать обратный звонок
@@ -9,4 +9,4 @@ include ../popup_button/popup_button
     .input: +popup_input("Ваше имя")
     .input: +popup_input("Телефон")
     .submit
-      +popup_button("Заказать звонок")
+      +button('submit', 'Заказать звонок')

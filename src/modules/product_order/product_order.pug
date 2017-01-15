@@ -1,6 +1,6 @@
 include ../popup/popup
 include ../popup_input/popup_input
-include ../popup_button/popup_button
+include ../button/button
 
 +popup('product-order')
   .title Оставить заявку
@@ -13,4 +13,4 @@ include ../popup_button/popup_button
         option Металлические двери
         option Металлические двери
         option Металлические двери
-    .input: +popup_button("Оставить заявку", true)
+    .input: +button('submit', "Оставить заявку", false, true)
