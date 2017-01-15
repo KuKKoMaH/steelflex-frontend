@@ -1221,8 +1221,9 @@
   height: auto;
 /* Set up positioning */
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .src-modules-index_production-block {
   background: #f5f5f5;
