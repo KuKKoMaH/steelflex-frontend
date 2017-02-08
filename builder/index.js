@@ -8,6 +8,7 @@ var html = require('./html');
 
 var files;
 var commonStyles = path.resolve(pathGenerator.paths.basePath, 'layout', 'layout.styl');
+var commonJs = path.resolve(pathGenerator.paths.basePath, 'layout', 'layout.js');
 
 var styles = {
   modules: {},
@@ -102,7 +103,9 @@ function pageCss(page, dir) {
 }
 
 function loadAllJs() {
-  var entries = {};
+  var entries = {
+    vendors: commonJs
+  };
   var styleModules = {};
   iterate(styles, (modules, type) =>{
     styleModules[type] = {};

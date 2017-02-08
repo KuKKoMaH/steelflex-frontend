@@ -69,15 +69,26 @@ input, textarea
     position: relative
     width: 100%
 
+    &.form-file
+      position: absolute
+      height: 100%
+      left: 0
+      top: 0
+
   .wpcf7-not-valid-tip
     position: absolute
     left: 0
     top: 100%
     width: 100%
     font-size: 14px
+    line-height: 1.2
     text-align: left
     padding-left: 22px
     color: $red
-    
+
+  .wpcf7-response-output
+    text-align: center
+    font-size: 12px
+
 .hidden
   display: none

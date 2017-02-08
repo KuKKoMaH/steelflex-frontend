@@ -15,12 +15,12 @@ include ../button/button
 
         p.contact: span.contact_text Мы свяжемся с вами в течение 24 часов
     .form
-      input.input(placeholder='Ваше имя')
-      input.input(placeholder='Телефон')
-      textarea.input.textarea(placeholder='Ваш комментарий')
+      .input_wrapper: input.input(placeholder='Ваше имя')
+      .input_wrapper: input.input(placeholder='Телефон')
+      .input_wrapper: textarea.input.textarea(placeholder='Ваш комментарий')
       .footer
         .file
           .name Прикрепить файл
-            input(type='file').file_input
+          input(type='file').file_input
         .submit
           +button('submit', 'ОТПРАВИТЬ', false, true)

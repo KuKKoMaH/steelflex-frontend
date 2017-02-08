@@ -15,6 +15,9 @@
   .input
     box-shadow: 0 1px 3px rgba(0, 1, 1, 0.1);
 
+.input_wrapper
+  margin-bottom: 17px
+
 .input
   display: block
   width: 100%
@@ -25,7 +28,6 @@
   line-height: 16px
   padding: ((40 - 16) / 2)px 24px
   outline: 0
-  margin-bottom: 12px
 
   &::-webkit-input-placeholder
   &::-moz-placeholder
@@ -64,11 +66,11 @@
     cursor: pointer
 
 .name
-  display: inline-block
-  vertical-align: middle
   font-size: 12px
-  line-height: 1.2
   font-weight: bold
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
 
 .submit
   display: inline-block
